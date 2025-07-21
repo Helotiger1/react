@@ -2,17 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 // 1. Define la interfaz para el objeto completo
 export type ContenidoProps = {
-  id: string;
+  id?: string;
   titulo: string;
   descripcion: React.ReactNode;
-  videoUrl: string;
+  videoUrl?: string;
   imagenUrl: string;
 };
 
 export const ContenidoNucleo: React.FC<{ content: ContenidoProps }> = ({ content }) => {
-  const { id, titulo, descripcion, videoUrl, imagenUrl } = content;
-
-  const embedVideoUrl = videoUrl.replace("watch?v=", "embed/");
+  const {titulo, descripcion, imagenUrl } = content;
 
   return (
     <motion.div

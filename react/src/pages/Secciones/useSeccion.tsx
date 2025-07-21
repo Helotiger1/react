@@ -14,7 +14,7 @@ export default function useContenido(name: string): ContenidoProps | undefined {
   const numeroNucleo = name.replace("nucleo", "");
 
 
-  const contenidoPorNucleo: Record<string, ContenidoProps> = {
+  const contenidoPorNucleo:any = {
     "1": contenidoDO_1,
     "2": contenidoDO_2,
     "3": contenidoDO_3,
